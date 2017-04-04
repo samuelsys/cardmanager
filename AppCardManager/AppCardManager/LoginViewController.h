@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginViewController.h
 //  AppCardManager
 //
 //  Created by Samuel Furtado e Silva on 04/04/17.
@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LoginViewController : UIViewController 
+
+
+    
 
 
 @end
