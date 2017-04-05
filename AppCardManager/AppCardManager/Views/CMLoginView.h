@@ -15,7 +15,16 @@ typedef NS_ENUM(NSInteger, TextFieldConst){
     ACMloginEmailTextLimit = 100
 };
 
+/**
+ *  setup the delegates in view
+ */
+
 - (void) setup;
+
+/**
+ *  try perform login and show alerts if fields not valid
+ */
+
 - (void) tryPerformLogin;
 
 @end

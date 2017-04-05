@@ -19,6 +19,8 @@
 
 @implementation CMLoginViewController
 
+#pragma mark - Override
+
 - (void) viewDidLoad {
     [super viewDidLoad];
     [self.loginView setup];
@@ -27,6 +29,8 @@
 - (CMLoginView *)loginView {
     return (CMLoginView *) self.view;
 }
+
+#pragma mark - IBActions
 
 - (IBAction)login:(id)sender {
     [self.loginView tryPerformLogin];

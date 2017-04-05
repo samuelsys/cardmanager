@@ -11,7 +11,22 @@
 
 @interface CMAlerts : NSObject
 
+/**
+ *  get a CMAlerts instance
+ *
+ *  @return a CMAlerts instance
+ */
+
 + (instancetype) sharedInstance;
+
+/**
+ *  Pop up a simple alert on screen
+ *
+ *  @param message message to be showed
+ *  @param title   title of the box
+ *  @param vc      view controller
+ */
+
 -(void)showMessage:(NSString*)message withTitle:(NSString *)title viewController:(UIViewController*) vc;
 
 @end
