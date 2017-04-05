@@ -7,31 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6DE24F611412D4FEDF7F37F /* libPods-AppCardManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FD570E4452D610B8BCD2D7 /* libPods-AppCardManager.a */; };
+		AF0342661E95600100A488AC /* CMLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6BA8241E955D8800867C48 /* CMLoginView.m */; };
 		AFDE944E1E9400DE00795265 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE944D1E9400DE00795265 /* main.m */; };
 		AFDE94511E9400DE00795265 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94501E9400DE00795265 /* AppDelegate.m */; };
-		AFDE94541E9400DE00795265 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94531E9400DE00795265 /* LoginViewController.m */; };
+		AFDE94541E9400DE00795265 /* CMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94531E9400DE00795265 /* CMLoginViewController.m */; };
 		AFDE94571E9400DE00795265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDE94551E9400DE00795265 /* Main.storyboard */; };
 		AFDE94591E9400DE00795265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDE94581E9400DE00795265 /* Assets.xcassets */; };
 		AFDE945C1E9400DE00795265 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDE945A1E9400DE00795265 /* LaunchScreen.storyboard */; };
-		AFDE94661E9473C600795265 /* Validators.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94651E9473C600795265 /* Validators.m */; };
-		AFDE94691E9473E600795265 /* Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94681E9473E600795265 /* Alerts.m */; };
+		AFDE94661E9473C600795265 /* CMValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94651E9473C600795265 /* CMValidators.m */; };
+		AFDE94691E9473E600795265 /* CMAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94681E9473E600795265 /* CMAlerts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BC2C2D56742D5B5535680F2 /* Pods-AppCardManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCardManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppCardManager/Pods-AppCardManager.debug.xcconfig"; sourceTree = "<group>"; };
+		29FD570E4452D610B8BCD2D7 /* libPods-AppCardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppCardManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF1439C0A53DFD5E5E03E265 /* Pods-AppCardManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCardManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppCardManager/Pods-AppCardManager.release.xcconfig"; sourceTree = "<group>"; };
+		AF6BA8231E955D8800867C48 /* CMLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMLoginView.h; sourceTree = "<group>"; };
+		AF6BA8241E955D8800867C48 /* CMLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMLoginView.m; sourceTree = "<group>"; };
 		AFDE94491E9400DE00795265 /* AppCardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDE944D1E9400DE00795265 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFDE944F1E9400DE00795265 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFDE94501E9400DE00795265 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AFDE94521E9400DE00795265 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		AFDE94531E9400DE00795265 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		AFDE94521E9400DE00795265 /* CMLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMLoginViewController.h; sourceTree = "<group>"; };
+		AFDE94531E9400DE00795265 /* CMLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMLoginViewController.m; sourceTree = "<group>"; };
 		AFDE94561E9400DE00795265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFDE94581E9400DE00795265 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFDE945B1E9400DE00795265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFDE945D1E9400DE00795265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFDE94641E9473C600795265 /* Validators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validators.h; sourceTree = "<group>"; };
-		AFDE94651E9473C600795265 /* Validators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validators.m; sourceTree = "<group>"; };
-		AFDE94671E9473E600795265 /* Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alerts.h; sourceTree = "<group>"; };
-		AFDE94681E9473E600795265 /* Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alerts.m; sourceTree = "<group>"; };
+		AFDE94641E9473C600795265 /* CMValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMValidators.h; sourceTree = "<group>"; };
+		AFDE94651E9473C600795265 /* CMValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMValidators.m; sourceTree = "<group>"; };
+		AFDE94671E9473E600795265 /* CMAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAlerts.h; sourceTree = "<group>"; };
+		AFDE94681E9473E600795265 /* CMAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAlerts.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,16 +46,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6DE24F611412D4FEDF7F37F /* libPods-AppCardManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3037F7D7EE04A55215FAA703 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29FD570E4452D610B8BCD2D7 /* libPods-AppCardManager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A0024F9FA9BC8CC2F91F7E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BC2C2D56742D5B5535680F2 /* Pods-AppCardManager.debug.xcconfig */,
+				AF1439C0A53DFD5E5E03E265 /* Pods-AppCardManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AFDE94401E9400DE00795265 = {
 			isa = PBXGroup;
 			children = (
 				AFDE944B1E9400DE00795265 /* AppCardManager */,
+				3037F7D7EE04A55215FAA703 /* Frameworks */,
+				9A0024F9FA9BC8CC2F91F7E4 /* Pods */,
 				AFDE944A1E9400DE00795265 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,37 +91,79 @@
 		AFDE944B1E9400DE00795265 /* AppCardManager */ = {
 			isa = PBXGroup;
 			children = (
-				AFDE94631E94737F00795265 /* Utils */,
-				AFDE94521E9400DE00795265 /* LoginViewController.h */,
-				AFDE94531E9400DE00795265 /* LoginViewController.m */,
-				AFDE94551E9400DE00795265 /* Main.storyboard */,
+				AFFBE0801E9552E10046D0B9 /* Business */,
+				AFFBE0821E95531E0046D0B9 /* Controllers */,
+				AFFBE0831E9553940046D0B9 /* Infrastructure */,
+				AFFBE07F1E9552D80046D0B9 /* Manager */,
+				AFFBE0841E9554410046D0B9 /* Storyboards */,
+				AFFBE07E1E954DF10046D0B9 /* Utils */,
+				AFFBE0811E9552EF0046D0B9 /* Views */,
 				AFDE94581E9400DE00795265 /* Assets.xcassets */,
-				AFDE945A1E9400DE00795265 /* LaunchScreen.storyboard */,
-				AFDE945D1E9400DE00795265 /* Info.plist */,
-				AFDE944C1E9400DE00795265 /* Supporting Files */,
 			);
 			path = AppCardManager;
 			sourceTree = "<group>";
 		};
-		AFDE944C1E9400DE00795265 /* Supporting Files */ = {
+		AFFBE07E1E954DF10046D0B9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AFDE94671E9473E600795265 /* CMAlerts.h */,
+				AFDE94681E9473E600795265 /* CMAlerts.m */,
+				AFDE94641E9473C600795265 /* CMValidators.h */,
+				AFDE94651E9473C600795265 /* CMValidators.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AFFBE07F1E9552D80046D0B9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		AFFBE0801E9552E10046D0B9 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		AFFBE0811E9552EF0046D0B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF6BA8231E955D8800867C48 /* CMLoginView.h */,
+				AF6BA8241E955D8800867C48 /* CMLoginView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFFBE0821E95531E0046D0B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFDE94521E9400DE00795265 /* CMLoginViewController.h */,
+				AFDE94531E9400DE00795265 /* CMLoginViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AFFBE0831E9553940046D0B9 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
 				AFDE944F1E9400DE00795265 /* AppDelegate.h */,
 				AFDE94501E9400DE00795265 /* AppDelegate.m */,
+				AFDE945D1E9400DE00795265 /* Info.plist */,
 				AFDE944D1E9400DE00795265 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
-		AFDE94631E94737F00795265 /* Utils */ = {
+		AFFBE0841E9554410046D0B9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				AFDE94641E9473C600795265 /* Validators.h */,
-				AFDE94651E9473C600795265 /* Validators.m */,
-				AFDE94671E9473E600795265 /* Alerts.h */,
-				AFDE94681E9473E600795265 /* Alerts.m */,
+				AFDE945A1E9400DE00795265 /* LaunchScreen.storyboard */,
+				AFDE94551E9400DE00795265 /* Main.storyboard */,
 			);
-			name = Utils;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFDE94601E9400DE00795265 /* Build configuration list for PBXNativeTarget "AppCardManager" */;
 			buildPhases = (
+				3CFF38578B2FEF6BB39FB86B /* [CP] Check Pods Manifest.lock */,
 				AFDE94451E9400DE00795265 /* Sources */,
 				AFDE94461E9400DE00795265 /* Frameworks */,
 				AFDE94471E9400DE00795265 /* Resources */,
+				058971EC18C7F6498B88EDB7 /* [CP] Embed Pods Frameworks */,
+				18CBC2B7516EDAC3474F328F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +195,7 @@
 		AFDE94411E9400DE00795265 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CM;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Samuel Furtado e Silva";
 				TargetAttributes = {
@@ -162,14 +235,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		058971EC18C7F6498B88EDB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppCardManager/Pods-AppCardManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18CBC2B7516EDAC3474F328F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppCardManager/Pods-AppCardManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CFF38578B2FEF6BB39FB86B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AFDE94451E9400DE00795265 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFDE94661E9473C600795265 /* Validators.m in Sources */,
-				AFDE94541E9400DE00795265 /* LoginViewController.m in Sources */,
-				AFDE94691E9473E600795265 /* Alerts.m in Sources */,
+				AF0342661E95600100A488AC /* CMLoginView.m in Sources */,
+				AFDE94661E9473C600795265 /* CMValidators.m in Sources */,
+				AFDE94541E9400DE00795265 /* CMLoginViewController.m in Sources */,
+				AFDE94691E9473E600795265 /* CMAlerts.m in Sources */,
 				AFDE94511E9400DE00795265 /* AppDelegate.m in Sources */,
 				AFDE944E1E9400DE00795265 /* main.m in Sources */,
 			);
@@ -184,6 +306,7 @@
 				AFDE94561E9400DE00795265 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		AFDE945A1E9400DE00795265 /* LaunchScreen.storyboard */ = {
@@ -192,6 +315,7 @@
 				AFDE945B1E9400DE00795265 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -281,9 +405,10 @@
 		};
 		AFDE94611E9400DE00795265 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BC2C2D56742D5B5535680F2 /* Pods-AppCardManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AppCardManager/Info.plist;
+				INFOPLIST_FILE = AppCardManager/Infrastructure/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tests.AppCardManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,9 +417,10 @@
 		};
 		AFDE94621E9400DE00795265 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF1439C0A53DFD5E5E03E265 /* Pods-AppCardManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AppCardManager/Info.plist;
+				INFOPLIST_FILE = AppCardManager/Infrastructure/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tests.AppCardManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -320,6 +446,7 @@
 				AFDE94621E9400DE00795265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

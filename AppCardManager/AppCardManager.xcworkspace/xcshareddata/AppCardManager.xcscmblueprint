@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4A52807A6F52E2ECEA5B2DE7158225BD48F33E49",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "07C9D90DE1439C73A8154D66329E31140CF66D56" : 0,
+    "4A52807A6F52E2ECEA5B2DE7158225BD48F33E49" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EC0906BB-9484-4339-9918-07E00F4DB440",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "07C9D90DE1439C73A8154D66329E31140CF66D56" : "",
+    "4A52807A6F52E2ECEA5B2DE7158225BD48F33E49" : "cardmanager\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AppCardManager",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AppCardManager\/AppCardManager.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:samuelsys\/facebook-login-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "07C9D90DE1439C73A8154D66329E31140CF66D56"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:samuelsys\/cardmanager.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4A52807A6F52E2ECEA5B2DE7158225BD48F33E49"
+    }
+  ]
+}
