@@ -13,6 +13,8 @@
 		AFDE94571E9400DE00795265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDE94551E9400DE00795265 /* Main.storyboard */; };
 		AFDE94591E9400DE00795265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDE94581E9400DE00795265 /* Assets.xcassets */; };
 		AFDE945C1E9400DE00795265 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDE945A1E9400DE00795265 /* LaunchScreen.storyboard */; };
+		AFDE94661E9473C600795265 /* Validators.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94651E9473C600795265 /* Validators.m */; };
+		AFDE94691E9473E600795265 /* Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94681E9473E600795265 /* Alerts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		AFDE94581E9400DE00795265 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFDE945B1E9400DE00795265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFDE945D1E9400DE00795265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFDE94641E9473C600795265 /* Validators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validators.h; sourceTree = "<group>"; };
+		AFDE94651E9473C600795265 /* Validators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validators.m; sourceTree = "<group>"; };
+		AFDE94671E9473E600795265 /* Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alerts.h; sourceTree = "<group>"; };
+		AFDE94681E9473E600795265 /* Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alerts.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		AFDE944B1E9400DE00795265 /* AppCardManager */ = {
 			isa = PBXGroup;
 			children = (
+				AFDE94631E94737F00795265 /* Utils */,
 				AFDE94521E9400DE00795265 /* LoginViewController.h */,
 				AFDE94531E9400DE00795265 /* LoginViewController.m */,
 				AFDE94551E9400DE00795265 /* Main.storyboard */,
@@ -77,6 +84,17 @@
 				AFDE944D1E9400DE00795265 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFDE94631E94737F00795265 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AFDE94641E9473C600795265 /* Validators.h */,
+				AFDE94651E9473C600795265 /* Validators.m */,
+				AFDE94671E9473E600795265 /* Alerts.h */,
+				AFDE94681E9473E600795265 /* Alerts.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDE94661E9473C600795265 /* Validators.m in Sources */,
 				AFDE94541E9400DE00795265 /* LoginViewController.m in Sources */,
+				AFDE94691E9473E600795265 /* Alerts.m in Sources */,
 				AFDE94511E9400DE00795265 /* AppDelegate.m in Sources */,
 				AFDE944E1E9400DE00795265 /* main.m in Sources */,
 			);
