@@ -10,6 +10,7 @@
 #import "CMLoginViewController.h"
 #import "CMAlerts.h"
 #import "CMValidators.h"
+#import "CMAdditions.h"
 
 static NSString* const ACMWarningFeedbackTitle = @"Ops";
 static NSString* const ACMSuccessFeedbackTitle = @"Sucesso";
@@ -22,6 +23,8 @@ static NSString* const ACMLoginSuccess = @"Login Realizado com Sucesso";
 
 @property (weak, nonatomic) IBOutlet UITextField *loginEmail;
 @property (weak, nonatomic) IBOutlet UITextField *loginPassword;
+@property (weak, nonatomic) IBOutlet UIButton *signinButton;
+@property (weak, nonatomic) IBOutlet UIButton *requestRegisterButton;
 
 @end
 
@@ -32,6 +35,13 @@ static NSString* const ACMLoginSuccess = @"Login Realizado com Sucesso";
 - (void) setup {
     self.loginEmail.delegate = self;
     self.loginPassword.delegate = self;
+    
+    [self setupTextField:self.loginEmail];
+    [self setupTextField:self.loginPassword];
+    
+    [self setupButton:self.signinButton];
+    [self setupButton:self.requestRegisterButton];
+    
 }
 
 - (void) tryPerformLogin {
@@ -43,6 +53,31 @@ static NSString* const ACMLoginSuccess = @"Login Realizado com Sucesso";
 }
 
 #pragma mark - Private Methods
+
+- (void) setupTextField:(UITextField*) textField{
+    
+    [textField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    
+    CALayer *border = [CALayer layer];
+    CGFloat borderWidth = 0.6;
+    
+    border.borderColor = [UIColor whiteColor].CGColor;
+    
+    border.frame = CGRectMake(0, textField.frame.size.height - borderWidth, textField.frame.size.width, textField.frame.size.height);
+    
+    border.borderWidth = borderWidth;
+    
+    textField.font = [CMAdditions cm_headerFont];
+    
+    [textField.layer addSublayer:border];
+    
+    textField.layer.masksToBounds = YES;
+}
+
+- (void) setupButton: (UIButton*) button {
+    button.layer.borderWidth = 0;
+    button.titleLabel.font = [CMAdditions cm_headerFont];
+}
 
 -(BOOL) validateFullLogin {
     
