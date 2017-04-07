@@ -11,13 +11,15 @@
 #import "CMAlerts.h"
 #import "CMValidators.h"
 #import "CMAdditions.h"
+#import "Reachability.h"
 
-static NSString* const ACMWarningFeedbackTitle = @"Ops";
-static NSString* const ACMSuccessFeedbackTitle = @"Sucesso";
-static NSString* const ACMInvalidFormatEmail = @"Formato de Email Inválido";
-static NSString* const ACMminimumPasswordLength = @"Senha deve ter 6 caracteres";
-static NSString* const ACMEmptyEMailOrPassword = @"Email e senha devem ser preenchidos";
-static NSString* const ACMLoginSuccess = @"Login Realizado com Sucesso";
+static NSString *const CMConnectionOffline = @"Sem conexão com a internet";
+static NSString *const CMWarningFeedbackTitle = @"Ops";
+static NSString *const CMSuccessFeedbackTitle = @"Sucesso";
+static NSString *const CMInvalidFormatEmail = @"Formato de Email Inválido";
+static NSString *const CMminimumPasswordLength = @"Senha deve ter 6 caracteres";
+static NSString *const CMEmptyEMailOrPassword = @"Email e senha devem ser preenchidos";
+static NSString *const CMLoginSuccess = @"Login Realizado com Sucesso";
 
 @interface CMLoginView () <UITextFieldDelegate>
 
@@ -26,13 +28,38 @@ static NSString* const ACMLoginSuccess = @"Login Realizado com Sucesso";
 @property (weak, nonatomic) IBOutlet UIButton *signinButton;
 @property (weak, nonatomic) IBOutlet UIButton *requestRegisterButton;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+
+@property (strong, nonatomic) UIViewController *controller;
+
 @end
 
 @implementation CMLoginView
 
+#pragma mark - Override properties
+
+- (void)startLoading{
+    [self.spinner startAnimating];
+    [self showLoadingIndicator];
+}
+
+- (void)stopLoading{
+    [self.spinner stopAnimating];
+    [self hideLoadingIndicator];
+}
+
+- (NSString *)email {
+    return self.loginEmail.text;
+}
+
+- (NSString *)password {
+    return self.loginPassword.text;
+}
+
 #pragma mark - Public Methods
 
-- (void) setup {
+- (void)setupWithController:(UIViewController *)controller {
+    self.controller = controller;
     self.loginEmail.delegate = self;
     self.loginPassword.delegate = self;
     
@@ -44,17 +71,17 @@ static NSString* const ACMLoginSuccess = @"Login Realizado com Sucesso";
     
 }
 
-- (void) tryPerformLogin {
-    if ([self validateFullLogin]){
-        [[CMAlerts sharedInstance] showMessage:ACMLoginSuccess
-                                     withTitle:ACMSuccessFeedbackTitle
-                                viewController:self.window.rootViewController];
-    }
+#pragma mark - Private Methods
+     
+-(void)showLoadingIndicator{
+    self.spinner.alpha = 1.0;
 }
 
-#pragma mark - Private Methods
-
-- (void) setupTextField:(UITextField*) textField{
+-(void)hideLoadingIndicator{
+    self.spinner.alpha = 0.0;
+}
+     
+- (void)setupTextField:(UITextField *)textField{
     
     [textField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     
@@ -74,64 +101,46 @@ static NSString* const ACMLoginSuccess = @"Login Realizado com Sucesso";
     textField.layer.masksToBounds = YES;
 }
 
-- (void) setupButton: (UIButton*) button {
+- (void)setupButton:(UIButton *)button {
     button.layer.borderWidth = 0;
     button.titleLabel.font = [CMAdditions cm_headerFont];
 }
 
--(BOOL) validateFullLogin {
-    
-    BOOL canPerformLogin = YES;
+-(BOOL)validateFullLogin {
     NSString *email = self.loginEmail.text;
     NSString *password = self.loginPassword.text;
     
-    if ([email length] > 0 && [password length] > 0){
-        
-        if (![[CMValidators sharedInstance] isEmailValid:email]){
-            [[CMAlerts sharedInstance] showMessage:ACMInvalidFormatEmail
-                                         withTitle:ACMWarningFeedbackTitle
-                                    viewController:self.window.rootViewController];
-            return !canPerformLogin;
-        }
-        if (!([password length] == ACMloginPasswordTextLimit)){
-            [[CMAlerts sharedInstance] showMessage:ACMminimumPasswordLength
-                                         withTitle:ACMWarningFeedbackTitle
-                                    viewController:self.window.rootViewController];
-            return !canPerformLogin;
-        }
-    }else{
-        [[CMAlerts sharedInstance] showMessage:ACMEmptyEMailOrPassword
-                                     withTitle:ACMWarningFeedbackTitle
-                                viewController:self.window.rootViewController];
-        return !canPerformLogin;
+    BOOL isOffline = [self isConnectionOffline];
+    BOOL isSomeTextFieldEmpty = !email.length || !password.length;
+    BOOL isEmailValid = [CMValidators isEmailValid:email];
+    BOOL isPasswordValid = password.length == CMTextFieldLimitPassword;
+    
+    if (isOffline || isSomeTextFieldEmpty || !isEmailValid || !isPasswordValid) {
+        [CMAlerts showMessage:isOffline ? CMConnectionOffline :
+                              isSomeTextFieldEmpty ? CMEmptyEMailOrPassword :
+                              isEmailValid ? CMminimumPasswordLength : CMInvalidFormatEmail
+                    withTitle:CMWarningFeedbackTitle
+               viewController:self.controller];
+        return NO;
     }
-    
-    return canPerformLogin;
-    
+    return YES;
 }
 
+- (BOOL)isConnectionOffline {
+    return [[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable;
+}
 
 #pragma mark - Delegates
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    
-    NSInteger textLimit = 0;
-    
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     if(range.length + range.location > textField.text.length){
         return NO;
     }
     
-    if (textField == self.loginEmail){
-        textLimit = ACMloginEmailTextLimit;
-    }else{
-        if (textField == self.loginPassword){
-            textLimit = ACMloginPasswordTextLimit;
-        }
-    }
+    NSInteger textLimit = textField == self.loginEmail ? CMTextFieldLimitEmail : CMTextFieldLimitPassword;
     
-    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    NSUInteger newLength = textField.text.length + string.length - range.length;
     return newLength <= textLimit;
-    
 }
 
 @end

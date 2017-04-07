@@ -32,8 +32,6 @@
 
 @end
 
-// Sample text styles
-
 @implementation CMAdditions (CMAdditionsFonts)
 
 + (UIFont *)cm_headerFont {

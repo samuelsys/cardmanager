@@ -20,8 +20,5 @@
 @end
 
 @interface CMAdditions (CMAdditionsFonts)
-
 + (UIFont *)cm_headerFont ;
-
-
 @end

@@ -6,25 +6,41 @@
 //  Copyright © 2017 Samuel Furtado e Silva. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface CMLoginView : UIView
 
-typedef NS_ENUM(NSInteger, TextFieldConst){
-    ACMloginPasswordTextLimit = 6,
-    ACMloginEmailTextLimit = 100
+@property (strong, nonatomic, readonly) NSString *email;
+@property (strong, nonatomic, readonly) NSString *password;
+
+
+typedef NS_ENUM(NSInteger, CMTextFieldLimit){
+    CMTextFieldLimitPassword = 6,
+    CMTextFieldLimitEmail = 100
 };
+
+/**
+ *  method to start loading animation
+ */
+
+- (void)startLoading;
+
+/**
+ * method to stop loading animation
+ */
+
+- (void)stopLoading;
 
 /**
  *  setup the delegates in view
  */
 
-- (void) setup;
+- (void)setupWithController:(UIViewController *)controller;
 
 /**
  *  try perform login and show alerts if fields not valid
  */
 
-- (void) tryPerformLogin;
+- (BOOL)validateFullLogin;
 
 @end

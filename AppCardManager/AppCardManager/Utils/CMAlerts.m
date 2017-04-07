@@ -12,17 +12,7 @@ static NSString* const ACMActionLabelOkButton = @"Ok";
 
 @implementation CMAlerts
 
-+(instancetype) sharedInstance{
-    
-    static CMAlerts *sharedInstance = nil;
-    
-    if (!sharedInstance){
-        sharedInstance = [[CMAlerts alloc] init];
-    }
-    return sharedInstance;
-}
-
--(void)showMessage:(NSString*)message withTitle:(NSString *)title viewController:(UIViewController*) vc {
++ (void)showMessage:(NSString*)message withTitle:(NSString *)title viewController:(UIViewController*) viewController {
     UIAlertController *alert = [UIAlertController
                                  alertControllerWithTitle:title
                                  message:message
@@ -34,7 +24,7 @@ static NSString* const ACMActionLabelOkButton = @"Ok";
                                 handler:nil];
     [alert addAction:okButton];
 
-    [vc presentViewController:alert animated:YES completion:nil];
+    [viewController presentViewController:alert animated:YES completion:nil];
 }
 
 

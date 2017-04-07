@@ -68,7 +68,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="U0b-Uf-e1z">
+                                    <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="U0b-Uf-e1z">
                                         <rect key="frame" x="149" y="133" width="37" height="37"/>
                                         <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </activityIndicatorView>
@@ -131,6 +131,7 @@
                             <outlet property="loginPassword" destination="OAf-nH-ah6" id="Zig-yu-9dD"/>
                             <outlet property="requestRegisterButton" destination="XSS-ca-BZV" id="Qnj-TJ-R5D"/>
                             <outlet property="signinButton" destination="BBS-O6-cvD" id="oHG-Ox-14j"/>
+                            <outlet property="spinner" destination="U0b-Uf-e1z" id="XMR-Pg-cUy"/>
                         </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

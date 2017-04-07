@@ -10,6 +10,12 @@
 		A6DE24F611412D4FEDF7F37F /* libPods-AppCardManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FD570E4452D610B8BCD2D7 /* libPods-AppCardManager.a */; };
 		AF0342661E95600100A488AC /* CMLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6BA8241E955D8800867C48 /* CMLoginView.m */; };
 		AF03426B1E959A6A00A488AC /* CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF03426A1E95993500A488AC /* CMAdditions.m */; };
+		AFD937AB1E96797100C9659D /* CMHTTPSessionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937AA1E96797100C9659D /* CMHTTPSessionProvider.m */; };
+		AFD937AF1E96A42100C9659D /* CMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937AE1E96A42100C9659D /* CMUser.m */; };
+		AFD937B21E96A5CF00C9659D /* CMUserBO.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937B11E96A5CF00C9659D /* CMUserBO.m */; };
+		AFD937B51E96A5F800C9659D /* CMLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937B41E96A5F800C9659D /* CMLoginManager.m */; };
+		AFD937B81E96ADF600C9659D /* CMExtract.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937B71E96ADF600C9659D /* CMExtract.m */; };
+		AFD937BB1E96AE0500C9659D /* CMCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937BA1E96AE0500C9659D /* CMCard.m */; };
 		AFDE944E1E9400DE00795265 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE944D1E9400DE00795265 /* main.m */; };
 		AFDE94511E9400DE00795265 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94501E9400DE00795265 /* AppDelegate.m */; };
 		AFDE94541E9400DE00795265 /* CMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94531E9400DE00795265 /* CMLoginViewController.m */; };
@@ -28,6 +34,18 @@
 		AF1439C0A53DFD5E5E03E265 /* Pods-AppCardManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCardManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppCardManager/Pods-AppCardManager.release.xcconfig"; sourceTree = "<group>"; };
 		AF6BA8231E955D8800867C48 /* CMLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMLoginView.h; sourceTree = "<group>"; };
 		AF6BA8241E955D8800867C48 /* CMLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMLoginView.m; sourceTree = "<group>"; };
+		AFD937A91E96797100C9659D /* CMHTTPSessionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHTTPSessionProvider.h; sourceTree = "<group>"; };
+		AFD937AA1E96797100C9659D /* CMHTTPSessionProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHTTPSessionProvider.m; sourceTree = "<group>"; };
+		AFD937AD1E96A42100C9659D /* CMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUser.h; sourceTree = "<group>"; };
+		AFD937AE1E96A42100C9659D /* CMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMUser.m; sourceTree = "<group>"; };
+		AFD937B01E96A5CF00C9659D /* CMUserBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMUserBO.h; path = CMUserBO.h; sourceTree = "<group>"; };
+		AFD937B11E96A5CF00C9659D /* CMUserBO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMUserBO.m; path = CMUserBO.m; sourceTree = "<group>"; };
+		AFD937B31E96A5F800C9659D /* CMLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMLoginManager.h; path = CMLoginManager.h; sourceTree = "<group>"; };
+		AFD937B41E96A5F800C9659D /* CMLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMLoginManager.m; path = CMLoginManager.m; sourceTree = "<group>"; };
+		AFD937B61E96ADF600C9659D /* CMExtract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMExtract.h; sourceTree = "<group>"; };
+		AFD937B71E96ADF600C9659D /* CMExtract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMExtract.m; sourceTree = "<group>"; };
+		AFD937B91E96AE0500C9659D /* CMCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCard.h; sourceTree = "<group>"; };
+		AFD937BA1E96AE0500C9659D /* CMCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCard.m; sourceTree = "<group>"; };
 		AFDE94491E9400DE00795265 /* AppCardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDE944D1E9400DE00795265 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFDE944F1E9400DE00795265 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +91,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AFD937A81E96790900C9659D /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				AFD937A91E96797100C9659D /* CMHTTPSessionProvider.h */,
+				AFD937AA1E96797100C9659D /* CMHTTPSessionProvider.m */,
+			);
+			name = Provider;
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		AFD937AC1E96A3D300C9659D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFD937B91E96AE0500C9659D /* CMCard.h */,
+				AFD937BA1E96AE0500C9659D /* CMCard.m */,
+				AFD937B61E96ADF600C9659D /* CMExtract.h */,
+				AFD937B71E96ADF600C9659D /* CMExtract.m */,
+				AFD937AD1E96A42100C9659D /* CMUser.h */,
+				AFD937AE1E96A42100C9659D /* CMUser.m */,
+			);
+			name = Model;
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AFDE94401E9400DE00795265 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +140,8 @@
 				AFFBE0821E95531E0046D0B9 /* Controllers */,
 				AFFBE0831E9553940046D0B9 /* Infrastructure */,
 				AFFBE07F1E9552D80046D0B9 /* Manager */,
+				AFD937AC1E96A3D300C9659D /* Model */,
+				AFD937A81E96790900C9659D /* Provider */,
 				AFFBE0841E9554410046D0B9 /* Storyboards */,
 				AFFBE07E1E954DF10046D0B9 /* Utils */,
 				AFFBE0811E9552EF0046D0B9 /* Views */,
@@ -122,6 +166,8 @@
 		AFFBE07F1E9552D80046D0B9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AFD937B31E96A5F800C9659D /* CMLoginManager.h */,
+				AFD937B41E96A5F800C9659D /* CMLoginManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -129,6 +175,8 @@
 		AFFBE0801E9552E10046D0B9 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				AFD937B01E96A5CF00C9659D /* CMUserBO.h */,
+				AFD937B11E96A5CF00C9659D /* CMUserBO.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -294,11 +342,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF03426B1E959A6A00A488AC /* CMAdditions.m in Sources */,
+				AFD937B21E96A5CF00C9659D /* CMUserBO.m in Sources */,
+				AFD937AB1E96797100C9659D /* CMHTTPSessionProvider.m in Sources */,
 				AF0342661E95600100A488AC /* CMLoginView.m in Sources */,
 				AFDE94661E9473C600795265 /* CMValidators.m in Sources */,
+				AFD937BB1E96AE0500C9659D /* CMCard.m in Sources */,
+				AFD937B81E96ADF600C9659D /* CMExtract.m in Sources */,
 				AFDE94541E9400DE00795265 /* CMLoginViewController.m in Sources */,
 				AFDE94691E9473E600795265 /* CMAlerts.m in Sources */,
+				AFD937B51E96A5F800C9659D /* CMLoginManager.m in Sources */,
 				AFDE94511E9400DE00795265 /* AppDelegate.m in Sources */,
+				AFD937AF1E96A42100C9659D /* CMUser.m in Sources */,
 				AFDE944E1E9400DE00795265 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

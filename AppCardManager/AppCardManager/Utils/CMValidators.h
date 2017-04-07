@@ -6,17 +6,9 @@
 //  Copyright © 2017 Samuel Furtado e Silva. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface CMValidators : NSObject
-
-/**
- *  get a CMValidators instance
- *
- *  @return a CMValidators instance
- */
-
-+ (instancetype) sharedInstance;
 
 /**
  *  Verify if an email is valid
@@ -25,7 +17,6 @@
  *
  *  @return a BOOL if email is valid
  */
-
-- (BOOL) isEmailValid:(NSString*) email;
++ (BOOL)isEmailValid:(NSString *)email;
 
 @end

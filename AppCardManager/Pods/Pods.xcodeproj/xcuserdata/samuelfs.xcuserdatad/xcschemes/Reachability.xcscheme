@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7E5753B60A9795585A2B09A68DD7CDCB'
-               BlueprintName = 'Pods-AppCardManager'
+               BlueprintIdentifier = '80054BF5B82E5F2B45064A0804BF1FFD'
+               BlueprintName = 'Reachability'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-AppCardManager.a'>
+               BuildableName = 'libReachability.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
