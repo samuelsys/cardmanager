@@ -8,8 +8,8 @@
 
 @import Foundation;
 
-typedef void (^UserSuccessProviderBlock) (id);
-typedef void (^UserFailureProviderBlock) (NSError *);
+typedef void (^UserSuccessProviderBlock)(id);
+typedef void (^UserFailureProviderBlock)(NSError *);
 
 @interface CMHTTPSessionProvider : NSObject
 

@@ -13,16 +13,12 @@ static NSString *const CMLoginServiceUrl = @"http://cardmanagerserver.herokuapp.
 
 @implementation CMHTTPSessionProvider
 
-+(instancetype)sharedInstance {
-    
++(instancetype)sharedInstance{
     static CMHTTPSessionProvider *sharedInstance = nil;
-    
     if (!sharedInstance){
         sharedInstance = [[CMHTTPSessionProvider alloc] init];
     }
-    
     return sharedInstance;
-    
 }
 
 -(void)loginWithUserName:(NSString*)userName

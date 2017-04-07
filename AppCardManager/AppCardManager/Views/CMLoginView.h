@@ -43,4 +43,9 @@ typedef NS_ENUM(NSInteger, CMTextFieldLimit){
 
 - (BOOL)validateFullLogin;
 
+/**
+ *  method to show a failure message when try perform login
+ */
+- (void)loginFailureMessage:(NSString *)message;
+
 @end

@@ -12,6 +12,7 @@
 #import "CMLoginView.h"
 #import "CMLoginManager.h"
 #import "CMUser.h"
+#import "CMSingletonUser.h"
 
 @interface CMLoginViewController ()
 
@@ -24,13 +25,11 @@
 
 #pragma mark - Override
 
--(CMLoginManager *)manager {
-    
+-(CMLoginManager *)manager{
     if (!_manager){
         _manager = [CMLoginManager new];
     }
     return _manager;
-    
 }
 
 - (void) viewDidLoad{
@@ -50,8 +49,13 @@
         [self.loginView startLoading];
         [self.manager loginWithUserName:self.loginView.email
                                password:self.loginView.password
-                    withCompletionBlock:^(CMUser *user, BOOL success) {
-                         [self.loginView stopLoading];
+                    withCompletionBlock:^(CMUser *user, BOOL success, NSString *message) {
+                        if (user){
+                            [CMSingletonUser sharedInstance].loggedUser = user;
+                        }else{
+                            [self.loginView loginFailureMessage:message];
+                        }
+                        [self.loginView stopLoading];
         }];
     }
 };

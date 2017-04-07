@@ -16,6 +16,7 @@
 		AFD937B51E96A5F800C9659D /* CMLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937B41E96A5F800C9659D /* CMLoginManager.m */; };
 		AFD937B81E96ADF600C9659D /* CMExtract.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937B71E96ADF600C9659D /* CMExtract.m */; };
 		AFD937BB1E96AE0500C9659D /* CMCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937BA1E96AE0500C9659D /* CMCard.m */; };
+		AFD937BF1E98141600C9659D /* CMSingletonUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937BE1E98141600C9659D /* CMSingletonUser.m */; };
 		AFDE944E1E9400DE00795265 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE944D1E9400DE00795265 /* main.m */; };
 		AFDE94511E9400DE00795265 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94501E9400DE00795265 /* AppDelegate.m */; };
 		AFDE94541E9400DE00795265 /* CMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94531E9400DE00795265 /* CMLoginViewController.m */; };
@@ -38,14 +39,16 @@
 		AFD937AA1E96797100C9659D /* CMHTTPSessionProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHTTPSessionProvider.m; sourceTree = "<group>"; };
 		AFD937AD1E96A42100C9659D /* CMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUser.h; sourceTree = "<group>"; };
 		AFD937AE1E96A42100C9659D /* CMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMUser.m; sourceTree = "<group>"; };
-		AFD937B01E96A5CF00C9659D /* CMUserBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMUserBO.h; path = CMUserBO.h; sourceTree = "<group>"; };
-		AFD937B11E96A5CF00C9659D /* CMUserBO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMUserBO.m; path = CMUserBO.m; sourceTree = "<group>"; };
-		AFD937B31E96A5F800C9659D /* CMLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMLoginManager.h; path = CMLoginManager.h; sourceTree = "<group>"; };
-		AFD937B41E96A5F800C9659D /* CMLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMLoginManager.m; path = CMLoginManager.m; sourceTree = "<group>"; };
+		AFD937B01E96A5CF00C9659D /* CMUserBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUserBO.h; sourceTree = "<group>"; };
+		AFD937B11E96A5CF00C9659D /* CMUserBO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMUserBO.m; sourceTree = "<group>"; };
+		AFD937B31E96A5F800C9659D /* CMLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLoginManager.h; sourceTree = "<group>"; };
+		AFD937B41E96A5F800C9659D /* CMLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMLoginManager.m; sourceTree = "<group>"; };
 		AFD937B61E96ADF600C9659D /* CMExtract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMExtract.h; sourceTree = "<group>"; };
 		AFD937B71E96ADF600C9659D /* CMExtract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMExtract.m; sourceTree = "<group>"; };
 		AFD937B91E96AE0500C9659D /* CMCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCard.h; sourceTree = "<group>"; };
 		AFD937BA1E96AE0500C9659D /* CMCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCard.m; sourceTree = "<group>"; };
+		AFD937BD1E98141600C9659D /* CMSingletonUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSingletonUser.h; sourceTree = "<group>"; };
+		AFD937BE1E98141600C9659D /* CMSingletonUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSingletonUser.m; sourceTree = "<group>"; };
 		AFDE94491E9400DE00795265 /* AppCardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDE944D1E9400DE00795265 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFDE944F1E9400DE00795265 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,7 +100,6 @@
 				AFD937A91E96797100C9659D /* CMHTTPSessionProvider.h */,
 				AFD937AA1E96797100C9659D /* CMHTTPSessionProvider.m */,
 			);
-			name = Provider;
 			path = Provider;
 			sourceTree = "<group>";
 		};
@@ -108,10 +110,11 @@
 				AFD937BA1E96AE0500C9659D /* CMCard.m */,
 				AFD937B61E96ADF600C9659D /* CMExtract.h */,
 				AFD937B71E96ADF600C9659D /* CMExtract.m */,
+				AFD937BD1E98141600C9659D /* CMSingletonUser.h */,
+				AFD937BE1E98141600C9659D /* CMSingletonUser.m */,
 				AFD937AD1E96A42100C9659D /* CMUser.h */,
 				AFD937AE1E96A42100C9659D /* CMUser.m */,
 			);
-			name = Model;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -351,6 +354,7 @@
 				AFDE94541E9400DE00795265 /* CMLoginViewController.m in Sources */,
 				AFDE94691E9473E600795265 /* CMAlerts.m in Sources */,
 				AFD937B51E96A5F800C9659D /* CMLoginManager.m in Sources */,
+				AFD937BF1E98141600C9659D /* CMSingletonUser.m in Sources */,
 				AFDE94511E9400DE00795265 /* AppDelegate.m in Sources */,
 				AFD937AF1E96A42100C9659D /* CMUser.m in Sources */,
 				AFDE944E1E9400DE00795265 /* main.m in Sources */,

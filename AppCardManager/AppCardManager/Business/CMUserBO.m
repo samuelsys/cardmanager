@@ -10,6 +10,8 @@
 #import "CMUser.h"
 #import "CMHTTPSessionProvider.h"
 
+static NSString *const CMGenericErrorMessage = @"Erro inesperado";
+
 @interface CMUserBO ()
 @end
 
@@ -25,11 +27,20 @@
     [sessionManager loginWithUserName:user
                     password:password
                     success:^(id responseObject) {
+                        
+                        NSString *result = [responseObject objectForKey:@"result"];
+                        
+                        if ([result isEqualToString:@"error"]){
+                            NSString *message = [responseObject objectForKey:@"message"];
+                            NSError* error = nil;
+                            return failure(error, message);
+                        }
+                        
                         CMUser *user = [[CMUser alloc] initWIthLoginResponse:responseObject];
                         success(user);
                         
                     } failure:^(NSError *error) {
-                        failure(error);
+                        failure(error, CMGenericErrorMessage);
                     }
      ];
 }

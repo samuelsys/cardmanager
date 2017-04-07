@@ -10,7 +10,7 @@
 #import "CMUser.h"
 #import "CMUserBO.h"
 
-typedef void(^UserBlock) (CMUser* , BOOL);
+typedef void(^UserBlock) (CMUser * , BOOL, NSString *);
 
 @interface CMLoginManager : NSObject
 

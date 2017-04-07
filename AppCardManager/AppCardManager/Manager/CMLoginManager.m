@@ -8,6 +8,8 @@
 
 #import "CMLoginManager.h"
 
+static NSString *const CMLoginWithSuccessMessage = @"Sucesso ao realizar login";
+
 @interface  CMLoginManager ()
 
 @property (strong, nonatomic) NSOperationQueue *mainQueue;
@@ -15,24 +17,21 @@
 
 @implementation CMLoginManager
 
--(NSOperationQueue *)mainQueue {
-    
+-(NSOperationQueue *)mainQueue{
     if (!_mainQueue){
         _mainQueue = [NSOperationQueue new];
     }
     return _mainQueue;
-    
 }
 
 - (void) loginWithUserName:(NSString *)user
                   password:(NSString *)password
        withCompletionBlock:(UserBlock)completionBlock{
-    
     [self.mainQueue addOperationWithBlock:^{
         [CMUserBO loginWithUserName:user password:password success:^(id user) {
-            completionBlock(user, YES);
-        } failure:^(NSError *error) {
-            completionBlock(nil, NO);
+            completionBlock(user, YES, CMLoginWithSuccessMessage);
+        } failure:^(NSError *error, NSString *message) {
+            completionBlock(nil, NO, message);
         }];
     }];
 }

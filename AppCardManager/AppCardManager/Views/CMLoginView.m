@@ -106,6 +106,12 @@ static NSString *const CMLoginSuccess = @"Login Realizado com Sucesso";
     button.titleLabel.font = [CMAdditions cm_headerFont];
 }
 
+- (void)loginFailureMessage:(NSString *)message {
+    [CMAlerts showMessage:message
+                withTitle:CMWarningFeedbackTitle
+           viewController:self.controller];
+}
+
 -(BOOL)validateFullLogin {
     NSString *email = self.loginEmail.text;
     NSString *password = self.loginPassword.text;

@@ -9,8 +9,8 @@
 @import Foundation;
 #import "CMUser.h"
 
-typedef void (^UserSuccessBlock)(CMUser*);
-typedef void (^UserErrorBlock)(NSError*);
+typedef void (^UserSuccessBlock)(CMUser *);
+typedef void (^UserErrorBlock)(NSError *, NSString *);
 
 @interface CMUserBO : NSObject
 
