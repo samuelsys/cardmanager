@@ -16,17 +16,20 @@ PODS:
     - AFNetworking/NSURLSession
   - CardIO (5.4.1)
   - Reachability (3.2)
+  - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - CardIO
   - Reachability
+  - SWRevealViewController
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: c116d63eae1a7f4f761c9253db141b691038e641
+PODFILE CHECKSUM: 34fa00a60a44131120b42204ce851d4264e84e31
 
 COCOAPODS: 1.1.1

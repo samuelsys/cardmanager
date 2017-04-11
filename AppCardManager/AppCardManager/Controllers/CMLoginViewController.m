@@ -13,6 +13,7 @@
 #import "CMLoginManager.h"
 #import "CMUser.h"
 #import "CMSingletonUser.h"
+#import "SWRevealViewController.h"
 
 @interface CMLoginViewController ()
 
@@ -52,6 +53,13 @@
                     withCompletionBlock:^(CMUser *user, BOOL success, NSString *message) {
                         if (user){
                             [CMSingletonUser sharedInstance].loggedUser = user;
+                            
+                            SWRevealViewController *mainFlow = [SWRevealViewController alloc];
+                            
+                            mainFlow = [self.storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+                            
+                            [self presentViewController:mainFlow animated:YES completion:nil];
+                            
                         }else{
                             [self.loginView loginFailureMessage:message];
                         }
