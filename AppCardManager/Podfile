@@ -9,5 +9,6 @@ target 'AppCardManager' do
 
   pod 'AFNetworking', '~> 3.0'
   pod 'Reachability'
+  pod 'CardIO'
 
 end

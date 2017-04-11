@@ -7,6 +7,7 @@
 //
 
 #import "CMValidators.h"
+#import "Reachability.h"
 
 @implementation CMValidators
 
@@ -17,9 +18,32 @@ static NSString* const ACMEmailPatternRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+
     NSString *regExPattern = ACMEmailPatternRegex;
     NSRegularExpression *regEx = [[NSRegularExpression alloc] initWithPattern:regExPattern options:NSRegularExpressionCaseInsensitive error:nil];
     
-    NSUInteger regExMatches = [regEx numberOfMatchesInString:email options:0 range:NSMakeRange(0, [email length])];
+    NSUInteger regExMatches = [regEx numberOfMatchesInString:email
+                                                     options:0
+                                                       range:NSMakeRange(0, [email length])];
 
     return regExMatches ? YES : NO;
+}
+
++ (BOOL)isConnectionOffline {
+    return [[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable;
+}
+
++ (BOOL)isNumeric:(NSString *)newCharacter{
+    unichar c = [newCharacter characterAtIndex:0];
+    NSCharacterSet *numericSet = [NSCharacterSet decimalDigitCharacterSet];
+    return [numericSet characterIsMember:c];
+}
+
++ (BOOL)hasMinimum3Characters:(NSString *)text{
+    return text.length >= 3;
+}
+
++ (BOOL)isCelPhoneValid:(NSString *)celPhone{
+    NSCharacterSet *nonDigitCharacterSet = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    NSString *onlyNumbers = [[celPhone componentsSeparatedByCharactersInSet:nonDigitCharacterSet]
+                             componentsJoinedByString:@""];
+    return onlyNumbers.length == 11;
 }
 
 @end

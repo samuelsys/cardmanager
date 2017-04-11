@@ -11,15 +11,8 @@
 #import "CMAlerts.h"
 #import "CMValidators.h"
 #import "CMAdditions.h"
-#import "Reachability.h"
-
-static NSString *const CMConnectionOffline = @"Sem conexão com a internet";
-static NSString *const CMWarningFeedbackTitle = @"Ops";
-static NSString *const CMSuccessFeedbackTitle = @"Sucesso";
-static NSString *const CMInvalidFormatEmail = @"Formato de Email Inválido";
-static NSString *const CMminimumPasswordLength = @"Senha deve ter 6 caracteres";
-static NSString *const CMEmptyEMailOrPassword = @"Email e senha devem ser preenchidos";
-static NSString *const CMLoginSuccess = @"Login Realizado com Sucesso";
+#import "CMComponentSetups.h"
+#import "CMGenericConstants.h"
 
 @interface CMLoginView () <UITextFieldDelegate>
 
@@ -63,8 +56,8 @@ static NSString *const CMLoginSuccess = @"Login Realizado com Sucesso";
     self.loginEmail.delegate = self;
     self.loginPassword.delegate = self;
     
-    [self setupTextField:self.loginEmail];
-    [self setupTextField:self.loginPassword];
+    [CMComponentSetups setupTextField:self.loginEmail withColor:[CMAdditions cm_whiteTwoColor]];
+    [CMComponentSetups setupTextField:self.loginPassword withColor:[CMAdditions cm_whiteTwoColor]];
     
     [self setupButton:self.signinButton];
     [self setupButton:self.requestRegisterButton];
@@ -79,26 +72,6 @@ static NSString *const CMLoginSuccess = @"Login Realizado com Sucesso";
 
 -(void)hideLoadingIndicator{
     self.spinner.alpha = 0.0;
-}
-     
-- (void)setupTextField:(UITextField *)textField{
-    
-    [textField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-    
-    CALayer *border = [CALayer layer];
-    CGFloat borderWidth = 0.6;
-    
-    border.borderColor = [UIColor whiteColor].CGColor;
-    
-    border.frame = CGRectMake(0, textField.frame.size.height - borderWidth, textField.frame.size.width, textField.frame.size.height);
-    
-    border.borderWidth = borderWidth;
-    
-    textField.font = [CMAdditions cm_headerFont];
-    
-    [textField.layer addSublayer:border];
-    
-    textField.layer.masksToBounds = YES;
 }
 
 - (void)setupButton:(UIButton *)button {
@@ -116,24 +89,20 @@ static NSString *const CMLoginSuccess = @"Login Realizado com Sucesso";
     NSString *email = self.loginEmail.text;
     NSString *password = self.loginPassword.text;
     
-    BOOL isOffline = [self isConnectionOffline];
+    BOOL isOffline = [CMValidators isConnectionOffline];
     BOOL isSomeTextFieldEmpty = !email.length || !password.length;
     BOOL isEmailValid = [CMValidators isEmailValid:email];
     BOOL isPasswordValid = password.length == CMTextFieldLimitPassword;
     
     if (isOffline || isSomeTextFieldEmpty || !isEmailValid || !isPasswordValid) {
         [CMAlerts showMessage:isOffline ? CMConnectionOffline :
-                              isSomeTextFieldEmpty ? CMEmptyEMailOrPassword :
+                              isSomeTextFieldEmpty ? CMEmptyFields :
                               isEmailValid ? CMminimumPasswordLength : CMInvalidFormatEmail
                     withTitle:CMWarningFeedbackTitle
                viewController:self.controller];
         return NO;
     }
     return YES;
-}
-
-- (BOOL)isConnectionOffline {
-    return [[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable;
 }
 
 #pragma mark - Delegates

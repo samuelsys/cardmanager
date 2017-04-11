@@ -10,10 +10,11 @@
 #import <AFNetworking/AFHTTPSessionManager.h>
 
 static NSString *const CMLoginServiceUrl = @"http://cardmanagerserver.herokuapp.com/login";
+static NSString *const CMRequestRegisterURL = @"http://cardmanagerserver.herokuapp.com/signup";
 
 @implementation CMHTTPSessionProvider
 
-+(instancetype)sharedInstance{
++ (instancetype)sharedInstance{
     static CMHTTPSessionProvider *sharedInstance = nil;
     if (!sharedInstance){
         sharedInstance = [[CMHTTPSessionProvider alloc] init];
@@ -21,7 +22,7 @@ static NSString *const CMLoginServiceUrl = @"http://cardmanagerserver.herokuapp.
     return sharedInstance;
 }
 
--(void)loginWithUserName:(NSString*)userName
+- (void)loginWithUserName:(NSString*)userName
                  password:(NSString*)password
                   success:(UserSuccessProviderBlock)success
                   failure:(UserFailureProviderBlock)failure {
@@ -31,6 +32,27 @@ static NSString *const CMLoginServiceUrl = @"http://cardmanagerserver.herokuapp.
                                  @"password": password};
     
     [manager POST:CMLoginServiceUrl parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    } progress:nil success:^(NSURLSessionDataTask *operation, id responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
+        failure (error);
+    }];
+}
+
+- (void)requestUserRegister:(NSString*)userName
+                email:(NSString*)email
+                celPhone:(NSString*)celPhone
+                cardNumber:(NSString*)cardNumber
+                 success:(UserSuccessProviderBlock)success
+                 failure:(UserFailureProviderBlock)failure {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    NSDictionary *parameters = @{@"name": userName ,
+                                 @"email": email,
+                                 @"phone_number": celPhone,
+                                 @"card_number": cardNumber};
+    
+    [manager POST:CMRequestRegisterURL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
     } progress:nil success:^(NSURLSessionDataTask *operation, id responseObject) {
         success(responseObject);
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {

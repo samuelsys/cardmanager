@@ -35,7 +35,7 @@
 @implementation CMAdditions (CMAdditionsFonts)
 
 + (UIFont *)cm_headerFont {
-    return [UIFont fontWithName:@"SFUIDisplay-Regular" size:24.0f];
+    return [UIFont fontWithName:@"SFUIDisplay-Regular" size:22.0f];
 }
 
 

@@ -17,7 +17,7 @@ static NSString *const CMLoginWithSuccessMessage = @"Sucesso ao realizar login";
 
 @implementation CMLoginManager
 
--(NSOperationQueue *)mainQueue{
+-(NSOperationQueue *)mainQueue {
     if (!_mainQueue){
         _mainQueue = [NSOperationQueue new];
     }

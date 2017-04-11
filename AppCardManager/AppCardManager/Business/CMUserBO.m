@@ -45,4 +45,29 @@ static NSString *const CMGenericErrorMessage = @"Erro inesperado";
      ];
 }
 
++ (void) newUserRequestRegister:(NSString *)userName
+                          email:(NSString *)email
+                       celphone:(NSString *)celphone
+                     cardNumber:(NSString *)cardNumber
+                     success:(UserRegisterSuccess)success
+                        failure:(UserErrorBlock)failure {
+    
+        CMHTTPSessionProvider *sessionManager = [CMHTTPSessionProvider sharedInstance];
+    
+    [sessionManager requestUserRegister:userName
+                                  email:email
+                               celPhone:celphone
+                             cardNumber:cardNumber
+                                success:^(id responseObject) {
+                                    
+                                    NSString *result = [responseObject objectForKey:@"result"];
+                                    success(result);
+    
+                                } failure:^(NSError *error) {
+                                    failure(error, @"Problemas na requisição");
+                                }];
+
+}
+
+
 @end

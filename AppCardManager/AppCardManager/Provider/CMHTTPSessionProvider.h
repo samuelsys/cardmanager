@@ -13,7 +13,7 @@ typedef void (^UserFailureProviderBlock)(NSError *);
 
 @interface CMHTTPSessionProvider : NSObject
 
-+(instancetype) sharedInstance;
++ (instancetype) sharedInstance;
 
 /**
  *  Http Post Call in LoginService
@@ -24,8 +24,26 @@ typedef void (^UserFailureProviderBlock)(NSError *);
  *  @param failure
  */
 
--(void) loginWithUserName:(NSString*)userName
+- (void) loginWithUserName:(NSString*)userName
                  password:(NSString*)password
                   success:(UserSuccessProviderBlock)success
                   failure:(UserFailureProviderBlock)failure;
+
+/**
+ *  Http Post Call in Signup Service
+ *
+ *  @param userName
+ *  @param email
+ *  @param celPhone
+ *  @param cardNumber
+ *  @param success
+ *  @param failure
+ */
+
+- (void)requestUserRegister:(NSString*)userName
+                     email:(NSString*)email
+                  celPhone:(NSString*)celPhone
+                cardNumber:(NSString*)cardNumber
+                   success:(UserSuccessProviderBlock)success
+                   failure:(UserFailureProviderBlock)failure;
 @end

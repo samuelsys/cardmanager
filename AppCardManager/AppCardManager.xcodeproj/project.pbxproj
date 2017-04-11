@@ -17,6 +17,11 @@
 		AFD937B81E96ADF600C9659D /* CMExtract.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937B71E96ADF600C9659D /* CMExtract.m */; };
 		AFD937BB1E96AE0500C9659D /* CMCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937BA1E96AE0500C9659D /* CMCard.m */; };
 		AFD937BF1E98141600C9659D /* CMSingletonUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937BE1E98141600C9659D /* CMSingletonUser.m */; };
+		AFD937C21E9A9A1300C9659D /* CMRequestRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937C11E9A9A1300C9659D /* CMRequestRegisterView.m */; };
+		AFD937C51E9A9A6F00C9659D /* CMRequestRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937C41E9A9A6F00C9659D /* CMRequestRegisterViewController.m */; };
+		AFD937CB1E9A9AFB00C9659D /* CMComponentSetups.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937CA1E9A9AFB00C9659D /* CMComponentSetups.m */; };
+		AFD937CE1E9BC80C00C9659D /* CMMasks.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937CD1E9BC80C00C9659D /* CMMasks.m */; };
+		AFD937D41E9C012400C9659D /* CMRequestRegisterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937D31E9C012400C9659D /* CMRequestRegisterManager.m */; };
 		AFDE944E1E9400DE00795265 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE944D1E9400DE00795265 /* main.m */; };
 		AFDE94511E9400DE00795265 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94501E9400DE00795265 /* AppDelegate.m */; };
 		AFDE94541E9400DE00795265 /* CMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94531E9400DE00795265 /* CMLoginViewController.m */; };
@@ -49,6 +54,17 @@
 		AFD937BA1E96AE0500C9659D /* CMCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCard.m; sourceTree = "<group>"; };
 		AFD937BD1E98141600C9659D /* CMSingletonUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSingletonUser.h; sourceTree = "<group>"; };
 		AFD937BE1E98141600C9659D /* CMSingletonUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSingletonUser.m; sourceTree = "<group>"; };
+		AFD937C01E9A9A1300C9659D /* CMRequestRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRequestRegisterView.h; sourceTree = "<group>"; };
+		AFD937C11E9A9A1300C9659D /* CMRequestRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRequestRegisterView.m; sourceTree = "<group>"; };
+		AFD937C31E9A9A6F00C9659D /* CMRequestRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRequestRegisterViewController.h; sourceTree = "<group>"; };
+		AFD937C41E9A9A6F00C9659D /* CMRequestRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRequestRegisterViewController.m; sourceTree = "<group>"; };
+		AFD937C91E9A9AFB00C9659D /* CMComponentSetups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMComponentSetups.h; sourceTree = "<group>"; };
+		AFD937CA1E9A9AFB00C9659D /* CMComponentSetups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMComponentSetups.m; sourceTree = "<group>"; };
+		AFD937CC1E9BC80C00C9659D /* CMMasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMasks.h; sourceTree = "<group>"; };
+		AFD937CD1E9BC80C00C9659D /* CMMasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMasks.m; sourceTree = "<group>"; };
+		AFD937CF1E9BF39F00C9659D /* CMGenericConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGenericConstants.h; sourceTree = "<group>"; };
+		AFD937D21E9C012400C9659D /* CMRequestRegisterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRequestRegisterManager.h; sourceTree = "<group>"; };
+		AFD937D31E9C012400C9659D /* CMRequestRegisterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRequestRegisterManager.m; sourceTree = "<group>"; };
 		AFDE94491E9400DE00795265 /* AppCardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDE944D1E9400DE00795265 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFDE944F1E9400DE00795265 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +176,11 @@
 				AF03426A1E95993500A488AC /* CMAdditions.m */,
 				AFDE94671E9473E600795265 /* CMAlerts.h */,
 				AFDE94681E9473E600795265 /* CMAlerts.m */,
+				AFD937C91E9A9AFB00C9659D /* CMComponentSetups.h */,
+				AFD937CA1E9A9AFB00C9659D /* CMComponentSetups.m */,
+				AFD937CF1E9BF39F00C9659D /* CMGenericConstants.h */,
+				AFD937CC1E9BC80C00C9659D /* CMMasks.h */,
+				AFD937CD1E9BC80C00C9659D /* CMMasks.m */,
 				AFDE94641E9473C600795265 /* CMValidators.h */,
 				AFDE94651E9473C600795265 /* CMValidators.m */,
 			);
@@ -171,6 +192,8 @@
 			children = (
 				AFD937B31E96A5F800C9659D /* CMLoginManager.h */,
 				AFD937B41E96A5F800C9659D /* CMLoginManager.m */,
+				AFD937D21E9C012400C9659D /* CMRequestRegisterManager.h */,
+				AFD937D31E9C012400C9659D /* CMRequestRegisterManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -189,6 +212,8 @@
 			children = (
 				AF6BA8231E955D8800867C48 /* CMLoginView.h */,
 				AF6BA8241E955D8800867C48 /* CMLoginView.m */,
+				AFD937C01E9A9A1300C9659D /* CMRequestRegisterView.h */,
+				AFD937C11E9A9A1300C9659D /* CMRequestRegisterView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +223,8 @@
 			children = (
 				AFDE94521E9400DE00795265 /* CMLoginViewController.h */,
 				AFDE94531E9400DE00795265 /* CMLoginViewController.m */,
+				AFD937C31E9A9A6F00C9659D /* CMRequestRegisterViewController.h */,
+				AFD937C41E9A9A6F00C9659D /* CMRequestRegisterViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -347,13 +374,18 @@
 				AF03426B1E959A6A00A488AC /* CMAdditions.m in Sources */,
 				AFD937B21E96A5CF00C9659D /* CMUserBO.m in Sources */,
 				AFD937AB1E96797100C9659D /* CMHTTPSessionProvider.m in Sources */,
+				AFD937CB1E9A9AFB00C9659D /* CMComponentSetups.m in Sources */,
 				AF0342661E95600100A488AC /* CMLoginView.m in Sources */,
+				AFD937CE1E9BC80C00C9659D /* CMMasks.m in Sources */,
 				AFDE94661E9473C600795265 /* CMValidators.m in Sources */,
+				AFD937D41E9C012400C9659D /* CMRequestRegisterManager.m in Sources */,
 				AFD937BB1E96AE0500C9659D /* CMCard.m in Sources */,
+				AFD937C21E9A9A1300C9659D /* CMRequestRegisterView.m in Sources */,
 				AFD937B81E96ADF600C9659D /* CMExtract.m in Sources */,
 				AFDE94541E9400DE00795265 /* CMLoginViewController.m in Sources */,
 				AFDE94691E9473E600795265 /* CMAlerts.m in Sources */,
 				AFD937B51E96A5F800C9659D /* CMLoginManager.m in Sources */,
+				AFD937C51E9A9A6F00C9659D /* CMRequestRegisterViewController.m in Sources */,
 				AFD937BF1E98141600C9659D /* CMSingletonUser.m in Sources */,
 				AFDE94511E9400DE00795265 /* AppDelegate.m in Sources */,
 				AFD937AF1E96A42100C9659D /* CMUser.m in Sources */,
