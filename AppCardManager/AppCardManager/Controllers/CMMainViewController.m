@@ -11,7 +11,6 @@
 
 @implementation CMMainViewController
 
-
 - (void) viewDidLoad{
     [super viewDidLoad];
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -25,6 +24,5 @@
     }
 
 }
-
 
 @end

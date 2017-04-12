@@ -44,9 +44,9 @@
 
 #pragma mark - IBActions
 
-- (IBAction)login:(id)sender{
+- (IBAction)login:(id)sender {
     
-    if ([self.loginView validateFullLogin]){
+    if ([self.loginView validateFullLogin]) {
         [self.loginView startLoading];
         [self.manager loginWithUserName:self.loginView.email
                                password:self.loginView.password

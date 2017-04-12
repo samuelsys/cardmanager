@@ -65,13 +65,11 @@
         NSLog(@"User canceled payment info");
         // Handle user cancellation here...
     }
-    
     self.cardIOView.alpha = 1.0;
 }
 
 - (IBAction)requestRegisterAction:(id)sender {
-    if ([self.requestRegisterLoginView isRegisterFormValid]){
-        
+    if ([self.requestRegisterLoginView isRegisterFormValid]) {
         NSString *userName = self.requestRegisterLoginView.userName;
         NSString *email = self.requestRegisterLoginView.email;
         NSString *celPhone = self.requestRegisterLoginView.celPhone;
