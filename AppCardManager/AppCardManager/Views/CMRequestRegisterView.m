@@ -80,19 +80,19 @@
 
 #pragma mark - Overrides
 
-- (NSString *) userName{
+- (NSString *)userName {
     return self.nameTextField.text;
 }
 
-- (NSString *) email{
+- (NSString *)email {
     return self.emailTextField.text;
 }
 
-- (NSString *) celPhone{
+- (NSString *)celPhone {
     return self.celPhoneTextField.text;
 }
 
-- (NSString *) cardNumber{
+- (NSString *)cardNumber { 
     return self.cardNumberTextField.text;
 }
 
