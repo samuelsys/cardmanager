@@ -20,3 +20,5 @@ static NSString *const CMNameMinimumCharacters = @"Nome deve ter no mínimo 3 ca
 static NSString *const CMCelPhoneMinimumCharacters = @"Telefone deve ter 11 números";
 static NSString *const CMRegisterSuccess = @"Registro solicitado com sucesso";
 static NSString *const CMRegisterFailure = @"Falha ao solicitar registro";
+
+static NSString *const CMKeyForCardNumberUserDefaults = @"card_number";

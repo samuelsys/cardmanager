@@ -12,6 +12,13 @@
 
 @implementation CMUser
 
+- (NSMutableArray *) cardMutableArray {
+    if (!_cardMutableArray) {
+        _cardMutableArray = [NSMutableArray new];
+    }
+    return _cardMutableArray;
+}
+
 -(CMUser*) initWIthLoginResponse:(id)loginResponse{
     
     CMUser *userReturn = [CMUser new];

@@ -14,7 +14,7 @@ static NSString *const CMRequestRegisterURL = @"http://cardmanagerserver.herokua
 
 @implementation CMHTTPSessionProvider
 
-+ (instancetype)sharedInstance{
++ (instancetype)sharedInstance {
     static CMHTTPSessionProvider *sharedInstance = nil;
     if (!sharedInstance){
         sharedInstance = [[CMHTTPSessionProvider alloc] init];

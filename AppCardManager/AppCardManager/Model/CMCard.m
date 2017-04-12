@@ -8,8 +8,16 @@
 
 #import "CMCard.h"
 #import "CMExtract.h"
+#import "CMGenericConstants.h"
 
 @implementation CMCard
+
+- (NSMutableArray *)extractMutableArray {
+    if (!_extractMutableArray) {
+        _extractMutableArray = [NSMutableArray new];
+    }
+    return _extractMutableArray;
+}
 
 -(CMCard*) initWithDictionary:(NSDictionary*)cardsDictionary {
     
@@ -35,6 +43,15 @@
     return card;
 }
 
-
-
++ (CMCard *)getCardInMutableArray:(NSInteger)cardNumber searchInMutableArray:(NSMutableArray *)cardsMutableArray {
+    for (int i = 0 ; i < [cardsMutableArray count] ;i++) {
+        
+        CMCard *card = cardsMutableArray[i];
+        if (card.cardNumber == cardNumber) {
+            return card;
+        }
+    }
+    return nil;
+}
+             
 @end

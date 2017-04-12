@@ -20,6 +20,25 @@
 @property (strong, nonatomic) NSString *invoiceAmount;
 @property (strong, nonatomic) NSMutableArray *extractMutableArray;
 
+/**
+ *  instantiate Card with a Dictionary Map
+ *
+ *  @param cardsDictionary
+ *
+ *  @return A Card Object
+ */
+
 -(CMCard*) initWithDictionary:(NSDictionary*) cardsDictionary;
+
+/**
+ *  search a card number into an array of cards
+ *
+ *  @param cardNumber
+ *  @param cardsMutableArray
+ *
+ *  @return the card object found or nil
+ */
+
++ (CMCard *)getCardInMutableArray:(NSInteger)cardNumber searchInMutableArray:(NSMutableArray *)cardsMutableArray;
 
 @end

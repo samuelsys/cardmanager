@@ -24,6 +24,10 @@
 		AFD937D41E9C012400C9659D /* CMRequestRegisterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937D31E9C012400C9659D /* CMRequestRegisterManager.m */; };
 		AFD937D71E9D346300C9659D /* CMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937D61E9D346300C9659D /* CMMainViewController.m */; };
 		AFD937DA1E9D380200C9659D /* CMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937D91E9D380200C9659D /* CMMenuViewController.m */; };
+		AFD937E31E9E9C4100C9659D /* CMMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937E21E9E9C4100C9659D /* CMMainView.m */; };
+		AFD937E61E9EA63A00C9659D /* CMCardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937E51E9EA63A00C9659D /* CMCardManager.m */; };
+		AFD937E91E9EA83E00C9659D /* CMCardBO.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937E81E9EA83E00C9659D /* CMCardBO.m */; };
+		AFD937EC1E9EBA8800C9659D /* CMUserDefaultsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD937EB1E9EBA8800C9659D /* CMUserDefaultsProvider.m */; };
 		AFDE944E1E9400DE00795265 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE944D1E9400DE00795265 /* main.m */; };
 		AFDE94511E9400DE00795265 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94501E9400DE00795265 /* AppDelegate.m */; };
 		AFDE94541E9400DE00795265 /* CMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDE94531E9400DE00795265 /* CMLoginViewController.m */; };
@@ -71,6 +75,14 @@
 		AFD937D61E9D346300C9659D /* CMMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMainViewController.m; sourceTree = "<group>"; };
 		AFD937D81E9D380200C9659D /* CMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMenuViewController.h; sourceTree = "<group>"; };
 		AFD937D91E9D380200C9659D /* CMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMenuViewController.m; sourceTree = "<group>"; };
+		AFD937E11E9E9C4100C9659D /* CMMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMainView.h; sourceTree = "<group>"; };
+		AFD937E21E9E9C4100C9659D /* CMMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMainView.m; sourceTree = "<group>"; };
+		AFD937E41E9EA63A00C9659D /* CMCardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCardManager.h; sourceTree = "<group>"; };
+		AFD937E51E9EA63A00C9659D /* CMCardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCardManager.m; sourceTree = "<group>"; };
+		AFD937E71E9EA83E00C9659D /* CMCardBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCardBO.h; sourceTree = "<group>"; };
+		AFD937E81E9EA83E00C9659D /* CMCardBO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCardBO.m; sourceTree = "<group>"; };
+		AFD937EA1E9EBA8800C9659D /* CMUserDefaultsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUserDefaultsProvider.h; sourceTree = "<group>"; };
+		AFD937EB1E9EBA8800C9659D /* CMUserDefaultsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMUserDefaultsProvider.m; sourceTree = "<group>"; };
 		AFDE94491E9400DE00795265 /* AppCardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDE944D1E9400DE00795265 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFDE944F1E9400DE00795265 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +133,8 @@
 			children = (
 				AFD937A91E96797100C9659D /* CMHTTPSessionProvider.h */,
 				AFD937AA1E96797100C9659D /* CMHTTPSessionProvider.m */,
+				AFD937EA1E9EBA8800C9659D /* CMUserDefaultsProvider.h */,
+				AFD937EB1E9EBA8800C9659D /* CMUserDefaultsProvider.m */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -196,6 +210,8 @@
 		AFFBE07F1E9552D80046D0B9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AFD937E41E9EA63A00C9659D /* CMCardManager.h */,
+				AFD937E51E9EA63A00C9659D /* CMCardManager.m */,
 				AFD937B31E96A5F800C9659D /* CMLoginManager.h */,
 				AFD937B41E96A5F800C9659D /* CMLoginManager.m */,
 				AFD937D21E9C012400C9659D /* CMRequestRegisterManager.h */,
@@ -207,6 +223,8 @@
 		AFFBE0801E9552E10046D0B9 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				AFD937E71E9EA83E00C9659D /* CMCardBO.h */,
+				AFD937E81E9EA83E00C9659D /* CMCardBO.m */,
 				AFD937B01E96A5CF00C9659D /* CMUserBO.h */,
 				AFD937B11E96A5CF00C9659D /* CMUserBO.m */,
 			);
@@ -218,6 +236,8 @@
 			children = (
 				AF6BA8231E955D8800867C48 /* CMLoginView.h */,
 				AF6BA8241E955D8800867C48 /* CMLoginView.m */,
+				AFD937E11E9E9C4100C9659D /* CMMainView.h */,
+				AFD937E21E9E9C4100C9659D /* CMMainView.m */,
 				AFD937C01E9A9A1300C9659D /* CMRequestRegisterView.h */,
 				AFD937C11E9A9A1300C9659D /* CMRequestRegisterView.m */,
 			);
@@ -382,11 +402,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF03426B1E959A6A00A488AC /* CMAdditions.m in Sources */,
+				AFD937E61E9EA63A00C9659D /* CMCardManager.m in Sources */,
 				AFD937B21E96A5CF00C9659D /* CMUserBO.m in Sources */,
 				AFD937AB1E96797100C9659D /* CMHTTPSessionProvider.m in Sources */,
+				AFD937E31E9E9C4100C9659D /* CMMainView.m in Sources */,
 				AFD937CB1E9A9AFB00C9659D /* CMComponentSetups.m in Sources */,
 				AF0342661E95600100A488AC /* CMLoginView.m in Sources */,
+				AFD937EC1E9EBA8800C9659D /* CMUserDefaultsProvider.m in Sources */,
 				AFD937CE1E9BC80C00C9659D /* CMMasks.m in Sources */,
+				AFD937E91E9EA83E00C9659D /* CMCardBO.m in Sources */,
 				AFDE94661E9473C600795265 /* CMValidators.m in Sources */,
 				AFD937D41E9C012400C9659D /* CMRequestRegisterManager.m in Sources */,
 				AFD937BB1E96AE0500C9659D /* CMCard.m in Sources */,

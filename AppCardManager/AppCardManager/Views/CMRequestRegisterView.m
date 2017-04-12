@@ -92,7 +92,7 @@
     return self.celPhoneTextField.text;
 }
 
-- (NSString *)cardNumber { 
+- (NSString *)cardNumber {
     return self.cardNumberTextField.text;
 }
 
