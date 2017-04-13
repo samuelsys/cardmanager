@@ -709,10 +709,10 @@
             </objects>
             <point key="canvasLocation" x="1400.5" y="1251.5"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Extract View Controller-->
         <scene sceneID="nAw-u3-Pa7">
             <objects>
-                <viewController id="CpT-SL-Dax" customClass="CMMainViewController" sceneMemberID="viewController">
+                <viewController id="CpT-SL-Dax" customClass="CMExtractViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xdG-ZG-7VV"/>
                         <viewControllerLayoutGuide type="bottom" id="va5-Kv-l3P"/>
@@ -735,7 +735,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="barButton" destination="pnQ-5h-KlX" id="ALI-zU-JA3"/>
+                        <outlet property="barButton" destination="pnQ-5h-KlX" id="wUc-h5-Sc7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Agm-NU-oBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -765,10 +765,10 @@
             </objects>
             <point key="canvasLocation" x="1242.5" y="2210.5"/>
         </scene>
-        <!--Main View Controller-->
+        <!--My Cards View Controller-->
         <scene sceneID="a5X-qs-aK4">
             <objects>
-                <viewController id="vAa-eq-qwc" customClass="CMMainViewController" sceneMemberID="viewController">
+                <viewController id="vAa-eq-qwc" customClass="CMMyCardsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6a1-6m-GN6"/>
                         <viewControllerLayoutGuide type="bottom" id="7b2-Yz-o8u"/>
@@ -777,26 +777,41 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MEUS CARTOES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXP-hH-xla">
-                                <rect key="frame" x="123" y="155" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fl3-Uh-U4l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reusableCell" rowHeight="180" id="4ZX-Gf-80f">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4ZX-Gf-80f" id="VW4-eb-MCt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fl3-Uh-U4l" firstAttribute="leading" secondItem="HFB-va-4sT" secondAttribute="leading" id="4Ti-ZG-sZq"/>
+                            <constraint firstItem="fl3-Uh-U4l" firstAttribute="top" secondItem="6a1-6m-GN6" secondAttribute="bottom" id="VoP-TC-AAs"/>
+                            <constraint firstItem="7b2-Yz-o8u" firstAttribute="top" secondItem="fl3-Uh-U4l" secondAttribute="bottom" id="nEl-Kd-KQv"/>
+                            <constraint firstAttribute="trailing" secondItem="fl3-Uh-U4l" secondAttribute="trailing" id="y4i-bv-ble"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9sH-vM-Otp">
                         <barButtonItem key="leftBarButtonItem" image="menuHamburguer" id="tdx-nz-dJ7"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="barButton" destination="tdx-nz-dJ7" id="qJ1-1r-vNd"/>
+                        <outlet property="barButton" destination="tdx-nz-dJ7" id="Sl0-hd-TXz"/>
+                        <outlet property="tableView" destination="fl3-Uh-U4l" id="rcN-e8-F49"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbA-7G-XZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="714.5" y="2210.5"/>
+            <point key="canvasLocation" x="743.5" y="2210.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p2v-I1-HbG">
@@ -821,10 +836,10 @@
             </objects>
             <point key="canvasLocation" x="290.5" y="2210.5"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Schedule Payment View Controller-->
         <scene sceneID="Xz8-Y5-IiK">
             <objects>
-                <viewController id="Eon-Z8-8mA" customClass="CMMainViewController" sceneMemberID="viewController">
+                <viewController id="Eon-Z8-8mA" customClass="CMSchedulePaymentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XQQ-6t-YtO"/>
                         <viewControllerLayoutGuide type="bottom" id="Ndn-uz-uGN"/>
@@ -833,12 +848,39 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AGENDAR PAGAMENTO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaP-8b-N5o">
-                                <rect key="frame" x="95" y="179" width="185" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NOME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNW-AJ-mox">
+                                <rect key="frame" x="20" y="76" width="327" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DATA DE VENCIMENTO" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPq-EM-eOK">
+                                <rect key="frame" x="20" y="142" width="327" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CÓDIGO DE BARRAS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y65-yN-bcJ">
+                                <rect key="frame" x="20" y="209" width="327" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiY-Lc-EJC">
+                                <rect key="frame" x="24" y="347" width="327" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.47058823529999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="LER CARTÃO PELA CAMERA">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cardReadAction:" destination="dZL-ve-50n" eventType="touchUpInside" id="8aV-qj-Kbd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5e-YK-75H">
+                                <rect key="frame" x="257" y="409" width="90" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="AGENDAR">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -847,7 +889,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="barButton" destination="xpA-zs-sTz" id="uXB-ac-rg5"/>
+                        <outlet property="barButton" destination="xpA-zs-sTz" id="eKJ-z2-anu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mE6-6U-jME" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -877,10 +919,10 @@
             </objects>
             <point key="canvasLocation" x="2156.5" y="2210.5"/>
         </scene>
-        <!--Main View Controller-->
+        <!--About View Controller-->
         <scene sceneID="nDe-gd-Lmh">
             <objects>
-                <viewController id="XHO-ZL-tUz" customClass="CMMainViewController" sceneMemberID="viewController">
+                <viewController id="XHO-ZL-tUz" customClass="CMAboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KOd-PN-Uhr"/>
                         <viewControllerLayoutGuide type="bottom" id="mAw-YJ-F0t"/>
@@ -908,7 +950,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="barButton" destination="Lbu-gA-A3A" id="5uQ-zu-IGg"/>
+                        <outlet property="barButton" destination="Lbu-gA-A3A" id="c37-Hd-505"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NeQ-Wm-sbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -955,6 +997,6 @@
         <image name="menuHamburguer" width="20" height="14"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vCd-42-v0b"/>
+        <segue reference="6tO-lm-pD6"/>
     </inferredMetricsTieBreakers>
 </document>

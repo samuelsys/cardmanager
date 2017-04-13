@@ -38,8 +38,6 @@
     [super viewDidLoad];
     
     [self.manager defineCardToShow:^(CMCard *cardToShow) {
-        
-        
         [self.mainView setup:cardToShow];
         
     }];
@@ -53,13 +51,5 @@
     }
 }
 
--(void) viewDidAppear:(BOOL)animated{
-    
-    
-    
-    
-    [super viewDidAppear:YES];
-    
-}
 
 @end
